@@ -1,7 +1,13 @@
 /* FRONTENDMENTORING ATRIBUTION STYLE */
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
-.hola{color: rgb(136, 56, 255)}
+.attribution{
+   font-size: 11px;
+   text-align: center;
+   margin: 30px 0;
+}
+.attribution a{
+   color: hsl(228, 45%, 44%);
+}
+
 
 
 
@@ -23,16 +29,44 @@
    box-sizing: border-box;
 }
 body{
-   padding: 50px 0;
+   max-width: 1440px;
    font-size: 16px;
    font-family: 'Rubik', sans serif;
+   background-color: #f9f4f9;
+}
+
+
+/* FIGURES */
+.figures{
+   position: relative;
+   z-index: -1;
+}
+.figureOne{
+   position: absolute;
+   width: 370px;
+   height: 700px;
+}
+.figureOne{
+   border-radius: 0 0 200px 200px;
+   background: linear-gradient(180deg, rgba(198,64,252,1) 0%, rgba(143,59,249,1) 100%);
+}
+
+
+
+/* WRAPP*/
+.wrapp{
+   display: grid;
+   align-items: center;
+   grid-template-columns: repeat(auto-fit, minmax(375px, 500px));
+   justify-content: center;
+   padding: 20px 0 0 0;
 }
 
 
 
 /* SMARTPHONE */
 .smartphone{
-   width: 375px;
+   width: 350px;
    height: 700px;
    display: flex;
    align-items: center;
@@ -40,7 +74,8 @@ body{
    margin: auto;
    border-radius: 30px;
    background-color: var(--White);
-   box-shadow: 0px 18px 30px 0px rgba(0,0,0,0.5);
+   box-shadow: 0px 18px 20px 0px rgba(0,0,0,0.3);
+   
 }
 .smartphone__screen{
    width: 93%;
@@ -110,7 +145,7 @@ body{
 }
 .chat__left,
 .chat__right{
-   padding: 10px 17px;
+   padding: 10px 13px;
    margin: 6px 0;
    font-size: .8rem;
    width: fit-content;
@@ -133,7 +168,7 @@ body{
    margin-top: -20px;
 }
 .chat__right img{
-   width: 65px;
+   width: 60px;
    border-radius: 10px;
    display: inline-block;
    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
@@ -214,8 +249,9 @@ body{
 
 /* BOOKING */
 .booking{
-   margin-top: 50px;
-   text-align: center;
+   margin-left: 50px;
+   text-align: left;
+   z-index: 2;
 }
 .booking h2{
    font-size: 3rem;
@@ -223,6 +259,25 @@ body{
 }
 .booking p{
    color: var(--DarkGrayishViolet);
-   padding: 20px;
-   line-height: 1.5;
+   line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+   .figureOne{
+      top: 0;
+      left: -50%;
+   }
+   .figureTwo{
+      height: 500px;
+      bottom: -30%;
+      right: -50%;
+   }
+   .booking{
+      margin-left: unset;
+      text-align: center;
+      padding: 50px 30px;
+   }
+   .booking h2{
+      font-size: 2.5rem;
+   }
 }
